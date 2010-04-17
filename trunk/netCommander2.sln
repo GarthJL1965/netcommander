@@ -1,6 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual C# Express 2008
+# Visual Studio 2008
+# SharpDevelop 3.2.0.5698
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netCommander2", "netCommander2.csproj", "{15514BDC-2494-4FA1-9911-2AF6509A514C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "nc2_interface", "..\nc2_interface\nc2_interface.csproj", "{6807BDF0-9388-4AAF-923F-3A2C06CF2F53}"
