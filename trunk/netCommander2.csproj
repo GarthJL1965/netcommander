@@ -1,0 +1,554 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15514BDC-2494-4FA1-9911-2AF6509A514C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>netCommander</RootNamespace>
+    <AssemblyName>netCommander2</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\maxim\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <CodeAnalysisRules>-Microsoft.Naming#CA1700;-Microsoft.Naming#CA1701;-Microsoft.Naming#CA1702;-Microsoft.Naming#CA1703;-Microsoft.Naming#CA1704;-Microsoft.Naming#CA1707;-Microsoft.Naming#CA1708;-Microsoft.Naming#CA1709;-Microsoft.Naming#CA1710;-Microsoft.Naming#CA1711;-Microsoft.Naming#CA1712;-Microsoft.Naming#CA1713;-Microsoft.Naming#CA1714;-Microsoft.Naming#CA1715;-Microsoft.Naming#CA1716;-Microsoft.Naming#CA1717;-Microsoft.Naming#CA1719;-Microsoft.Naming#CA1720;-Microsoft.Naming#CA1721;-Microsoft.Naming#CA1722;-Microsoft.Naming#CA1724;-Microsoft.Naming#CA1725;-Microsoft.Naming#CA1726</CodeAnalysisRules>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\NetTools\SharpZipLib_0855_Bin\net-20\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseMenu.cs" />
+    <Compile Include="dialogs\ArchiveAddDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\ArchiveAddDialog.Designer.cs">
+      <DependentUpon>ArchiveAddDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommandPrompt.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CommandPrompt.Designer.cs">
+      <DependentUpon>CommandPrompt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CopyFileEngine.cs" />
+    <Compile Include="dialogs\CreateLinkDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\CreateLinkDialog.Designer.cs">
+      <DependentUpon>CreateLinkDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\CredentialsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\CredentialsDialog.Designer.cs">
+      <DependentUpon>CredentialsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\CreateDirectoryDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\CreateDirectoryDialog.Designer.cs">
+      <DependentUpon>CreateDirectoryDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\CopyFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\CopyFileDialog.Designer.cs">
+      <DependentUpon>CopyFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\CopyFileProgressDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\CopyFileProgressDialog.Designer.cs">
+      <DependentUpon>CopyFileProgressDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\DeleteFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\DeleteFileDialog.Designer.cs">
+      <DependentUpon>DeleteFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\DirectoryListFilterDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\DirectoryListFilterDialog.Designer.cs">
+      <DependentUpon>DirectoryListFilterDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\FileViewEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\FileViewEditDialog.Designer.cs">
+      <DependentUpon>FileViewEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\FlagBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dialogs\FlagBox.designer.cs">
+      <DependentUpon>FlagBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\NetInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\NetInfoDialog.Designer.cs">
+      <DependentUpon>NetInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\ProcessInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\ProcessInfoDialog.Designer.cs">
+      <DependentUpon>ProcessInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\TerminateProcessDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\TerminateProcessDialog.Designer.cs">
+      <DependentUpon>TerminateProcessDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\VolumeSpaceInfoDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\VolumeSpaceInfoDialog.Designer.cs">
+      <DependentUpon>VolumeSpaceInfoDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\ExtractDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\ExtractDialog.Designer.cs">
+      <DependentUpon>ExtractDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCollections\DirectoryList.cs" />
+    <Compile Include="ItemCollections\DirectoryListFilter.cs" />
+    <Compile Include="DirectorySearchEngine.cs" />
+    <Compile Include="dialogs\DirectorySearchResultDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\DirectorySearchResultDialog.Designer.cs">
+      <DependentUpon>DirectorySearchResultDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\FileInformationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\FileInformationDialog.Designer.cs">
+      <DependentUpon>FileInformationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystemEx\NativeNT.cs" />
+    <Compile Include="FileSystemEx\NTSTATUS_helper.cs" />
+    <Compile Include="FileSystemEx\WrapperNT.cs" />
+    <Compile Include="dialogs\FileSystemSecurityViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dialogs\FileSystemSecurityViewer.Designer.cs">
+      <DependentUpon>FileSystemSecurityViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\JumpToDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\JumpToDialog.Designer.cs">
+      <DependentUpon>JumpToDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\FtpConnectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\FtpConnectionDialog.Designer.cs">
+      <DependentUpon>FtpConnectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCollections\FtpDirectoryList.cs" />
+    <Compile Include="dialogs\FtpDownloadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\FtpDownloadDialog.Designer.cs">
+      <DependentUpon>FtpDownloadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FtpDownloadEngine.cs" />
+    <Compile Include="FtpUploadEngine.cs" />
+    <Compile Include="ItemCollections\ProcessList.cs" />
+    <Compile Include="ItemCollections\ZipDirectory.cs" />
+    <Compile Include="list_control\ColorScheme.cs" />
+    <Compile Include="list_control\DoublePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="list_control\DoublePanel.Designer.cs">
+      <DependentUpon>DoublePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\FileAttributesEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\FileAttributesEditDialog.Designer.cs">
+      <DependentUpon>FileAttributesEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystemEx\DriveDetector.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ItemCollections\DriveList.cs" />
+    <Compile Include="ItemCollections\FileCollectionBase.cs" />
+    <Compile Include="FileSystemEx\Native.cs" />
+    <Compile Include="FileSystemEx\VolumeGuidEnum.cs" />
+    <Compile Include="FileSystemEx\VolumeInfo.cs" />
+    <Compile Include="FileSystemEx\VolumeMountPointEnum.cs" />
+    <Compile Include="FileSystemEx\Wrapper.cs" />
+    <Compile Include="mainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOhelper.cs" />
+    <Compile Include="list_control\mFilePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="list_control\mFilePanel.Designer.cs">
+      <DependentUpon>mFilePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MassRename\rename_rules.cs" />
+    <Compile Include="Messages.cs" />
+    <Compile Include="list_control\mInfoPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="list_control\mListControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dialogs\MoveFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\MoveFileDialog.Designer.cs">
+      <DependentUpon>MoveFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoveFileEngine.cs" />
+    <Compile Include="NetApi\Native.cs" />
+    <Compile Include="NetApi\NetApiWrapper.cs" />
+    <Compile Include="ItemCollections\NetResourceList.cs" />
+    <Compile Include="ItemCollections\NetServerList.cs" />
+    <Compile Include="ItemCollections\NetshareList.cs" />
+    <Compile Include="Options.cs" />
+    <Compile Include="PanelCommands\PanelCommandDeleteZipEntry.cs" />
+    <Compile Include="PanelCommands\PanelCommandExtractZipEnties.cs" />
+    <Compile Include="PanelCommands\PanelCommandFileView.cs" />
+    <Compile Include="PanelCommands\PanelCommandAddCommandlineShort.cs" />
+    <Compile Include="PanelCommands\PanelCommandAddCommandlineLong.cs" />
+    <Compile Include="PanelCommands\PanelCommandProcessInfo.cs" />
+    <Compile Include="PanelCommands\PanelCommandRunExe.cs" />
+    <Compile Include="PanelCommands\PanelCommandCreateLink.cs" />
+    <Compile Include="PanelCommands\PanelCommandFtpCreateDirectory.cs">
+    </Compile>
+    <Compile Include="PanelCommands\PanelCommandFtpDelete.cs" />
+    <Compile Include="PanelCommands\PanelCommandFtpDownload.cs" />
+    <Compile Include="PanelCommands\PanelComandCreateDirectory.cs" />
+    <Compile Include="PanelCommands\PanelComandDeleteFile.cs" />
+    <Compile Include="PanelCommands\PanelCommandBase.cs" />
+    <Compile Include="PanelCommands\PanelCommandCopyFile.cs" />
+    <Compile Include="PanelCommands\PanelCommandFileAttributesEdit.cs" />
+    <Compile Include="PanelCommands\PanelCommandFileInfo.cs" />
+    <Compile Include="PanelCommands\PanelCommandMoveFile.cs" />
+    <Compile Include="PanelCommands\PanelCommandServerInfo.cs" />
+    <Compile Include="PanelCommands\PanelCommandTerminateProcess.cs" />
+    <Compile Include="PanelCommands\PanelCommandTouchFile.cs" />
+    <Compile Include="PanelCommands\PanelCommandVolumeSpace.cs" />
+    <Compile Include="PluginEngine.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox.resx">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\ArchiveAddDialog.resx">
+      <DependentUpon>ArchiveAddDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CommandPrompt.resx">
+      <DependentUpon>CommandPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\CreateLinkDialog.resx">
+      <DependentUpon>CreateLinkDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\CredentialsDialog.resx">
+      <DependentUpon>CredentialsDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\CreateDirectoryDialog.resx">
+      <DependentUpon>CreateDirectoryDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\CopyFileDialog.resx">
+      <DependentUpon>CopyFileDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\CopyFileProgressDialog.resx">
+      <DependentUpon>CopyFileProgressDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\DeleteFileDialog.resx">
+      <DependentUpon>DeleteFileDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\DirectoryListFilterDialog.resx">
+      <DependentUpon>DirectoryListFilterDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\FileViewEditDialog.resx">
+      <DependentUpon>FileViewEditDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\FlagBox.resx">
+      <DependentUpon>FlagBox.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\DirectorySearchResultDialog.resx">
+      <DependentUpon>DirectorySearchResultDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\FileInformationDialog.resx">
+      <DependentUpon>FileInformationDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\FileSystemSecurityViewer.resx">
+      <DependentUpon>FileSystemSecurityViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\FtpConnectionDialog.resx">
+      <DependentUpon>FtpConnectionDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\JumpToDialog.resx">
+      <DependentUpon>JumpToDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\FtpDownloadDialog.resx">
+      <DependentUpon>FtpDownloadDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\NetInfoDialog.resx">
+      <DependentUpon>NetInfoDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\ProcessInfoDialog.resx">
+      <DependentUpon>ProcessInfoDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\TerminateProcessDialog.resx">
+      <DependentUpon>TerminateProcessDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\VolumeSpaceInfoDialog.resx">
+      <DependentUpon>VolumeSpaceInfoDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\ExtractDialog.resx">
+      <DependentUpon>ExtractDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list_control\DoublePanel.resx">
+      <DependentUpon>DoublePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\FileAttributesEditDialog.resx">
+      <DependentUpon>FileAttributesEditDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mainForm.resx">
+      <DependentUpon>mainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="list_control\mFilePanel.resx">
+      <DependentUpon>mFilePanel.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\MoveFileDialog.resx">
+      <DependentUpon>MoveFileDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\TouchFileDialog.resx">
+      <DependentUpon>TouchFileDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\StreamViewer.resx">
+      <DependentUpon>StreamViewer.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\RunexeDialog.resx">
+      <DependentUpon>RunexeDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\UserMenuEditDialog.resx">
+      <DependentUpon>UserMenuEditDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\UserMenuEntryEditDialog.resx">
+      <DependentUpon>UserMenuEntryEditDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dialogs\TextFindDialog.resx">
+      <DependentUpon>TextFindDialog.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="colors.cfg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="dialogs\RunexeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\RunexeDialog.Designer.cs">
+      <DependentUpon>RunexeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShellContextMenu.cs" />
+    <Compile Include="dialogs\TouchFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\TouchFileDialog.Designer.cs">
+      <DependentUpon>TouchFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ItemCollections\StreamList.cs" />
+    <Compile Include="dialogs\StreamViewer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dialogs\StreamViewer.Designer.cs">
+      <DependentUpon>StreamViewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\TextFindDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\TextFindDialog.Designer.cs">
+      <DependentUpon>TextFindDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dialogs\UserMenuEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\UserMenuEditDialog.Designer.cs">
+      <DependentUpon>UserMenuEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dialogs\UserMenuEntryEditDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dialogs\UserMenuEntryEditDialog.Designer.cs">
+      <DependentUpon>UserMenuEntryEditDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewEdit\caret_helper.cs" />
+    <Compile Include="ViewEdit\encoding_helper.cs" />
+    <Compile Include="ViewEdit\gdi_text_declarations.cs" />
+    <Compile Include="ViewEdit\mTextViewControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ViewEdit\script_string_api.cs" />
+    <Compile Include="ViewEdit\script_string_text_area.cs" />
+    <Compile Include="ViewEdit\stream_edit.cs" />
+    <Compile Include="ViewEdit\TextProvider.cs" />
+    <Compile Include="WildCardMatching.cs" />
+    <Compile Include="WnetApi\Native.cs" />
+    <Compile Include="WnetApi\WNetException.cs" />
+    <Compile Include="WnetApi\WNetWrapper.cs" />
+    <Compile Include="WnetApi\Wnet_enumerator.cs" />
+    <Compile Include="ItemCollections\WnetResourceList.cs" />
+    <Compile Include="ZipAddEngine.cs" />
+    <Compile Include="ZipExtractEngine.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lang\lang.ru-RU.txt" />
+    <Content Include="Lang\lang.txt" />
+    <Content Include="LICENSE.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\nc2_interface\nc2_interface.csproj">
+      <Project>{6807BDF0-9388-4AAF-923F-3A2C06CF2F53}</Project>
+      <Name>nc2_interface</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
