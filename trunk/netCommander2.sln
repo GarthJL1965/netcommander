@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+# SharpDevelop 3.2.0.5698
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "netCommander2", "netCommander2.csproj", "{15514BDC-2494-4FA1-9911-2AF6509A514C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{15514BDC-2494-4FA1-9911-2AF6509A514C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15514BDC-2494-4FA1-9911-2AF6509A514C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15514BDC-2494-4FA1-9911-2AF6509A514C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15514BDC-2494-4FA1-9911-2AF6509A514C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
