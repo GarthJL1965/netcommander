@@ -329,16 +329,5 @@ namespace netCommander
 
             #endregion
         }
-
-
-
-
-
-
-
-        public override int[] FindItems()
-        {
-            return new int[] { };
-        }
     }
 }

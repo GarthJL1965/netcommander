@@ -386,11 +386,6 @@ namespace netCommander
             return ret;
         }
 
-        public override int[] FindItems()
-        {
-            throw new NotImplementedException();
-        }
-
         public override string GetStatusText()
         {
             return string.Format("{0}/{1}", internal_conection.Options.ServerName, internal_directory_path);

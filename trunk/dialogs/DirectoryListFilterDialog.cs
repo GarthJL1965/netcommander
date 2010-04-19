@@ -46,6 +46,7 @@ namespace netCommander
                 return;
             }
 
+			Text = Options.GetLiteral(Options.LANG_SELECT);
             tabPage1.Text = Options.GetLiteral(Options.LANG_FILE_NAME);
             groupBox4.Text = Options.GetLiteral(Options.LANG_LOCATION);
             radioButtonCurrentDirectory.Text = Options.GetLiteral(Options.LANG_CURRENT_DIRECTORY);
