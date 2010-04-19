@@ -408,6 +408,8 @@ namespace netCommander
         public const string LANG_TERMINATE_DEBUG_MODE = "TerminateWithDebugPrivilegs";
 
         public const string LANG_PROCESSES = "Processes";
+        
+        public const string LANG_SELECT = "Select";
 
         private static ResourceManager rm = null;
         public static ResourceManager LangManager

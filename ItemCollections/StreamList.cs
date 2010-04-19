@@ -226,11 +226,6 @@ namespace netCommander
             return ret;
         }
 
-        public override int[] FindItems()
-        {
-            return new int[] { };
-        }
-
         public override string GetStatusText()
         {
             return

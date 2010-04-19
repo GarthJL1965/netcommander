@@ -35,7 +35,6 @@ namespace netCommander
         /// <param name="preferred_focused_text">text to set caret</param>
         public abstract void GetChildCollection(int index, ref FileCollectionBase new_collection, ref bool use_new,ref string preferred_focused_text);
         public abstract int FindIndexOfName(string name);
-        public abstract int[] FindItems();
         public abstract string GetStatusText();
         public abstract string GetCommandlineTextShort(int index);
         public abstract string GetCommandlineTextLong(int index);
@@ -99,6 +98,19 @@ namespace netCommander
         {
             return ItemCategory.Default;
         }
+        
+        /// <summary>
+        /// this is stub now. may be implemented
+        /// proc call when user press '+'
+        /// and must return list of item indexes to select
+        /// </summary>
+        /// <returns></returns>
+		public virtual int[] FindItems()
+		{
+			return new int[0]{};
+		}
+		
+
 
         public List<PanelCommandBase> AvailableCommands
         {

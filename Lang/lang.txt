@@ -414,3 +414,5 @@ TerminateSendCloseWindow=Send close main window message
 TerminateKill=Kill process
 TerminateWithDebugPrivilegs=Use debug privilegs
 Processes=Processes
+
+Select=Select

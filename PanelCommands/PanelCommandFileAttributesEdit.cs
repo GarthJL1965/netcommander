@@ -9,8 +9,10 @@ namespace netCommander
 {
     class PanelCommandFileAttributesEdit : PanelCommandBase
     {
+    	// ctrl-a hides panel keyboard shortcut (see mFilePanel.ProcessDialogKey)
+    	//ctrl-r now
         public PanelCommandFileAttributesEdit()
-            : base(Options.GetLiteral(Options.LANG_FILE_ATTRIBUTES), Shortcut.CtrlA)
+            : base(Options.GetLiteral(Options.LANG_FILE_ATTRIBUTES), Shortcut.CtrlR)
         {
 
         }

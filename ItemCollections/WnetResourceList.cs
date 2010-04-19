@@ -506,11 +506,6 @@ namespace netCommander
             return ret;
         }
 
-        public override int[] FindItems()
-        {
-            throw new NotImplementedException();
-        }
-
         public override string GetStatusText()
         {
             return resource_root.lpRemoteName == null ? "Network" : resource_root.lpRemoteName;
