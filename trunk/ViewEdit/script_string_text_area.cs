@@ -58,11 +58,11 @@ namespace netCommander.FileView
             }
 
             char ret = new char();
-            IntPtr buffer=IntPtr.Zero;
-            int chars_filled=0;
-            bool eof=false;
+            IntPtr buffer = IntPtr.Zero;
+            int chars_filled = 0;
+            bool eof = false;
 
-            FetchCharsToScreen(char_index, 1, true,out buffer, out chars_filled, out eof);
+            FetchCharsToScreen(char_index, 1, true, out buffer, out chars_filled, out eof);
             if (chars_filled > 0)
             {
                 ret = Marshal.PtrToStringUni(buffer, chars_filled)[0];

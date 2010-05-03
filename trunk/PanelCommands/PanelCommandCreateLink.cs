@@ -138,7 +138,7 @@ namespace netCommander
                             WinAPiFSwrapper.CreateSymbolicLink(link_name, entry.FullName, entry.Directory);
                             OnItemProcessDone(new ItemEventArs(entry.FileName));
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
                             Messages.ShowException
                                 (new Win32Exception(Marshal.GetLastWin32Error()),

@@ -4,6 +4,9 @@ using System.Text;
 
 namespace netCommander.FileView
 {
+    /*
+     * для отображения доступных кодировок в меню
+     */
     public class encoding_helper
     {
         public static Encoding_DisplayInfo[] GetEncodings()
@@ -24,7 +27,7 @@ namespace netCommander.FileView
         public EncodingInfo EncodingInfo { get; set; }
         public override string ToString()
         {
-            return string.Format("{0} [code page:{2}] [IANA:{1}]", EncodingInfo.DisplayName, EncodingInfo.Name, EncodingInfo.CodePage);
+            return string.Format("{0} [code page: {2}] [IANA: {1}]", EncodingInfo.DisplayName, EncodingInfo.Name, EncodingInfo.CodePage);
         }
     }
 }

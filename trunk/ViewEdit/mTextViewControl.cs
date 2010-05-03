@@ -23,15 +23,6 @@ namespace netCommander.FileView
                 ControlStyles.UserPaint |
                 ControlStyles.Selectable,
                 true);
-
-            //test_stream = new FileStream
-            //    (@"d:\docs\dyatlow_utf16.txt",
-            //    FileMode.Open,
-            //    FileAccess.Read);
-            //test_provider = new TextProviderFileMultybyte(test_stream, Encoding.Unicode);
-            //vScroll.Dock = DockStyle.Right;
-            //Controls.Add(vScroll);
-            //client_text_rectangle = new Rectangle(ClientRectangle.Location, new Size(ClientSize.Width - vScroll.Width, ClientSize.Height));
         }
 
         protected override void OnCreateControl()
@@ -39,7 +30,6 @@ namespace netCommander.FileView
             text_area.Bounds = ClientRectangle;
             text_area.FetchCharsToScreen = this.fetch_text;
             text_area.FetchSelectionRange = this.fetch_selection;
-
 
             base.OnCreateControl();
         }

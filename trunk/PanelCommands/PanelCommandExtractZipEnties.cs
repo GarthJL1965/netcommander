@@ -28,7 +28,7 @@ namespace netCommander
             OnQueryCurrentPanel(e_current);
             OnQueryOtherPanel(e_other);
 
-            int buffer_size = 0x8000;
+            //int buffer_size = 0x8000;
 
             if (!(e_other.ItemCollection is DirectoryList))
             {

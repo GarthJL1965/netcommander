@@ -394,7 +394,7 @@ namespace netCommander
                     //    long delta = s_info.EndOfFile - s_info.AllocationSize;
                     //}
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     //Messages.ShowException
                     //    (ex,
