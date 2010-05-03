@@ -1689,7 +1689,7 @@ namespace netCommander
                         default:
                             throw new Win32Exception(win_err);
                     }
-                    return false;
+                    
                 }
                 else
                 {
